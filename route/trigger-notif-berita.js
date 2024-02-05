@@ -17,7 +17,7 @@ router.post("/berita", async (req, res) => {
       getAccessToken().then((accessToken) => {
         request.post(
           {
-            url: "https://fcm.googleapis.com/v1/projects/datakara-f5d14/messages:send",
+            url: "https://fcm.googleapis.com/v1/projects/taufiq-notification/messages:send",
             headers: {
               "Content-Type": "application/json",
               Authorization: "Bearer " + accessToken,
