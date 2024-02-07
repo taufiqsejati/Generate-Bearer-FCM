@@ -24,14 +24,18 @@ router.post("/berita", async (req, res) => {
             },
             body: JSON.stringify({
               message: {
-                topic: "public",
+                topic: "fcm_test",
                 notification: {
                   title: judul,
                   body: isi,
                 },
+                data: {
+                  via: "0ad971c0-e890-11ec-809e-8fbd082ffea1",
+                  route: "/message",
+                },
                 android: {
                   notification: {
-                    channel_id: "cropacoulus",
+                    channel_id: "taufiq-notification",
                   },
                 },
               },
